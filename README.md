@@ -118,7 +118,7 @@ The backend should now be available at:
 Open Terminal 2 from the repository root:
 
 ```bash
-cd CredX/Frontend
+cd Frontend
 npm ci
 npm run dev
 ```
