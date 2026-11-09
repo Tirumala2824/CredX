@@ -68,4 +68,4 @@ Run the checks relevant to your change. Do not claim a check passed unless you r
 
 ## License
 
-No license file is currently present. Until the project owner adds and publishes a license, contributors should not assume that the code may be reused, redistributed, or modified under an open-source license.
+CredX is distributed under the [MIT License](LICENSE). Only contribute code and assets that you have the right to submit under the project's license. Identify third-party materials and their applicable terms; do not copy code, datasets, model weights, or media into the repository without checking redistribution rights.
