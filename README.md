@@ -125,7 +125,7 @@ npm run dev
 
 Astro prints the local URL; the default is http://localhost:4321.
 
-The frontend API client currently has a development/provisioned backend URL fallback. To use a different backend, set `PUBLIC_API_URL` in the frontend environment (for example, create `Frontend/.env` with `PUBLIC_API_URL=http://127.0.0.1:8000`). Ensure the backend CORS policy allows the exact frontend origin before browser requests are made. Do not put secrets in `PUBLIC_*` variables; they are exposed to browser code.
+The frontend API client currently has a development/provisioned backend URL fallback. To use a different backend, set `PUBLIC_API_URL` in the frontend environment (for example, create `Frontend/.env` with `PUBLIC_API_URL=http://127.0.0.1:8000`). The current backend middleware is permissive (`allow_origins=["*"]`) and does not consume the `CORS_ORIGINS` setting. This works for local testing but is not a production CORS policy; replace it with an explicit trusted-origin allowlist before exposing the API. Do not put secrets in `PUBLIC_*` variables; they are exposed to browser code.
 
 ### Windows PowerShell quick reference
 
@@ -239,7 +239,7 @@ Deployment-specific notes are maintained separately:
 - [Zoho Catalyst AppSail development deployment](backend/docs/DEPLOYMENT_CATALYST.md)
 - [Backend README and pip alternative](backend/README.md)
 
-The Catalyst workflow deploys the backend only. It does not deploy the Astro frontend. Review the deployment document before configuring secrets or running deployment workflows.
+The Catalyst workflow deploys the backend only; it does not deploy the Astro frontend. Important: the current workflow has a repository-name guard for `Adhivp/CredX`, so its remote deployment job is skipped in this `Tirumala2824/CredX` copy (the build/test job can still run). Do not remove that guard or configure deployment secrets until the target project, account, environment, and service have been explicitly verified. See the deployment document before changing this.
 
 ## Security and responsible use
 
@@ -269,7 +269,7 @@ Please include reproducible steps, expected behavior and actual behavior in bug 
 
 ## License
 
-No license file is currently present. Until a license is added, do not assume the code is licensed for reuse, redistribution or modification. Add an explicit open-source license before describing the repository as open source in the legal sense.
+CredX is distributed under the [MIT License](LICENSE). The license applies to project materials owned by the repository copyright holder. Third-party datasets, libraries, model weights, trademarks, and other bundled assets may have separate terms; review their upstream licenses before use or redistribution.
 
 ---
 
