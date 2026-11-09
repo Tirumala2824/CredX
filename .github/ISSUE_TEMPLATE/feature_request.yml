@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest an improvement to CredX.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should this solve?
+      description: Explain the user need or workflow that is currently difficult.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the behaviour you would like to see.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Mention other approaches or trade-offs, if any.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Scope and impact
+      description: Note affected areas such as API, UI, data model, security, or documentation.
