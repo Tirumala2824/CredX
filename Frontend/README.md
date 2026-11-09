@@ -25,7 +25,7 @@ The frontend API client uses the deployed CredX API as its default outside local
 PUBLIC_API_URL=http://127.0.0.1:8000
 ```
 
-For example, copy the tracked template:
+Copy the tracked template:
 
 ```bash
 cp .env.example .env
@@ -39,7 +39,7 @@ Copy-Item .env.example .env
 
 Astro exposes variables prefixed with `PUBLIC_` to browser code. Put only public configuration here; never put API keys, passwords, signing secrets, or private credentials in a `PUBLIC_*` variable.
 
-When using the local backend, make sure its CORS configuration permits the frontend origin (`http://localhost:4321`). See the root [README](../README.md) and [backend configuration example](../backend/.env.example).
+The current backend has permissive wildcard CORS settings for development. Do not expose it publicly with that configuration; use an explicit trusted-origin allowlist before production. See the root [README](../README.md) and [backend configuration example](../backend/.env.example).
 
 ## Run locally
 
